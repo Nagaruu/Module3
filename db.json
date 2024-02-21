@@ -1,0 +1,50 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "image": "http://images.amazon.com/images/P/0596004478.01._PE30_PI_SCMZZZZZZZ_.jpg",
+      "name": "Madame trở lại",
+      "author": "Quốc Quân",
+      "price": 31,
+      "qty": 5,
+      "description": "",
+      "genre": "",
+      "publicationYear": "3/10/2023",
+      "rating": [
+        {
+          "username": "amonious",
+          "score": "8"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "http://images.amazon.com/images/P/0596004613.01._PE30_PI_SCMZZZZZZZ_.jpg",
+      "name": "Đào Phở và Mai",
+      "author": "Phan Đăng",
+      "price": 31,
+      "qty": 6,
+      "description": "",
+      "genre": "",
+      "publicationYear": "3/10/2023",
+      "rating": [
+        {
+          "username": "amonious",
+          "score": "8"
+        }
+      ]
+    },
+    {
+      "id": "f99f2b0c-73a4-49b0-a08d-9db5e9c38d6b",
+      "title": "test",
+      "author": "test",
+      "price": 4,
+      "qty": 3,
+      "description": "",
+      "category": [],
+      "year": 2,
+      "rating": 1,
+      "image": "test"
+    }
+  ]
+}

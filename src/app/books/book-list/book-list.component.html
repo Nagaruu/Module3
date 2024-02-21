@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row">
+      <ng-container *ngFor="let item of books">
+        <div class="card-ui col-md-3" routerLink="/{{item.id}}">
+          <img [src]="item.image" alt="Book Image"> 
+          <h5>{{ item.name }}</h5>
+          <p>Author: {{ item.author }}</p>
+          <p>Publication Year: {{ item.publicationYear }}</p>
+          <p>Price: {{ item.price}}<strong>VNĐ</strong></p>
+          <p>Quantity: {{ item.qty }}</p>
+          <button class="btn btn-primary" routerLink="{{item.id}}">
+            view now
+          </button>
+          <button pButton class="btn btn-primary" (click)="deleteBook(item.id)">
+            Delete Book
+        </button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Form Add New Book</h2>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="newBookForm" (ngSubmit)="addBook()">
+            <!-- Title -->
+            <div class="form-group">
+              <label for="title">Name:</label>
+              <input type="text" class="form-control" id="title"  formControlName="title" required>
+              
+            </div>
+            <!-- Display validation messages for title -->
+              
+    
+            <!-- Author -->
+            <div class="form-group">
+              <label for="author">Author:</label>
+              <input type="text" class="form-control" id="author" formControlName="author">
+            </div>
+    
+            <!-- Price -->
+            <div class="form-group">
+              <label for="price">Price:</label>
+              <input type="number" class="form-control" id="price" formControlName="price">
+            </div>
+    
+            <!-- Quantity -->
+            <div class="form-group">
+              <label for="qty">Quantity:</label>
+              <input type="number" class="form-control" id="qty"  formControlName="qty">
+            </div>
+  
+            <!-- Year -->
+            <div class="form-group">
+              <label for="year">Year:</label>
+              <input type="number" class="form-control" id="year" formControlName="year">
+            </div>
+    
+            <!-- Rating -->
+            <div class="form-group">
+              <label for="rating">Rating:</label>
+              <input type="number" class="form-control" id="rating"  formControlName="rating">
+            </div>
+    
+            <!-- Image -->
+            <div class="form-group">
+              <label for="image">Image URL:</label>
+              <input type="text" class="form-control" id="image"  formControlName="image">
+            </div>
+    
+            <button type="submit" class="btn btn-primary btn-full mt-3">Add Book</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
